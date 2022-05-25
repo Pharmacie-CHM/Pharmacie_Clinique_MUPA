@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-logo = st.sidebar.image('img/logo_chm.png')
+logo = st.sidebar.image('logo_chm.png')
 st.sidebar.caption("Guide d'analyse pharmacothérapeutique chez le patient MUPA.")
 
 data_frame = pd.read_csv('Tableau Medoc Source Code.csv')
