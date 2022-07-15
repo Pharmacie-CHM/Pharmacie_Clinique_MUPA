@@ -15,7 +15,7 @@ def main():
         page_icon="💊",
         layout="wide"
     )
-    logo = st.sidebar.image('img/logo_chm.png')
+    logo = st.sidebar.image('logo_chm.png')
     pages = ("🇫🇷 Version Française", "🇬🇧 English Version")
     page = st.sidebar.selectbox(label = "For the English version ↙️",
                                 options = pages,
