@@ -64,6 +64,9 @@ def main():
 
             st.header('Analyse pharmaco-thérapeutique')
             st.subheader('Liste des prescriptions')
+            
+            if liste_presc == [] :
+                st.image('Tutoriel.png')
 
             if "liste_presc" in st.session_state:
                  for medoc in st.session_state.liste_presc :  
