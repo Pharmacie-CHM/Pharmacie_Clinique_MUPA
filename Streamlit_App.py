@@ -118,7 +118,6 @@ def main():
 
                                           else :
                                             st.write(f"**{data_frame.loc[{medoc}, 'Category'][i]}**")
-                                            st.write(f"**{data_frame.loc[{medoc}, 'Category'][i]}**")
                                             txt = st.checkbox(f"{data_frame.loc[{medoc}, 'Condition'][i]}",
                                                               key = medoc + data_frame.loc[{medoc}, 'Condition'][i])
                                             if txt :
