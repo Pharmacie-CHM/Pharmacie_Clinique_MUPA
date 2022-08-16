@@ -100,7 +100,7 @@ def main():
                                               st.text_area(f"{data_frame.loc[{medoc}, 'Condition'][i]}",
                                                        f"{data_frame.loc[{medoc}, 'Paragraphe'][i]}",
                                                        key = int(np.random.randint(0, 100000, size=(1, 1))),
-                                                       max_chars=500, help="Source : {data_frame.loc[{medoc}, 'Reference'][i]}")
+                                                       max_chars=500, help=f"Source : {data_frame.loc[{medoc}, 'Reference'][i]}")
                                               text_to_be_copied = data_frame.loc[{medoc}, 'Paragraphe'][i]
                                               copy_dict = {"content": text_to_be_copied}
 
@@ -125,7 +125,7 @@ def main():
                                                 st.text_area("À adapter selon le contexte", 
                                                               f"{data_frame.loc[{medoc}, 'Paragraphe'][i]}",
                                                               key = int(np.random.randint(0, 100000, size=(1, 1))),
-                                                              max_chars=500, help="Source : {data_frame.loc[{medoc}, 'Reference'][i]}")
+                                                              max_chars=500, help=f"Source : {data_frame.loc[{medoc}, 'Reference'][i]}")
                                                 text_to_be_copied = data_frame.loc[{medoc}, 'Paragraphe'][i]
                                                 copy_dict = {"content": text_to_be_copied}
 
@@ -154,7 +154,7 @@ def main():
                                             st.text_area("À adapter selon le contexte", 
                                                         f"{data_frame.loc[{medoc}, 'Paragraphe'][i]}",
                                                         key = int(np.random.randint(0, 100000, size=(1, 1))),
-                                                        max_chars=500, help="Source : {data_frame.loc[{medoc}, 'Reference'][i]}")
+                                                        max_chars=500, help=f"Source : {data_frame.loc[{medoc}, 'Reference'][i]}")
                                             text_to_be_copied = data_frame.loc[{medoc}, 'Paragraphe'][i]
                                             copy_dict = {"content": text_to_be_copied}
 
