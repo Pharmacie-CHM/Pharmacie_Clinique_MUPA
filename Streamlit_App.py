@@ -117,28 +117,29 @@ def main():
                                                    debounce_time=0)
 
                                           else :
-                                               st.write(f"**{data_frame.loc[{medoc}, 'Category'][i]}**")
-                                               txt = st.checkbox(f"{data_frame.loc[{medoc}, 'Condition'][i]}",
+                                            st.write(f"**{data_frame.loc[{medoc}, 'Category'][i]}**")
+                                            st.write(f"**{data_frame.loc[{medoc}, 'Category'][i]}**")
+                                            txt = st.checkbox(f"{data_frame.loc[{medoc}, 'Condition'][i]}",
                                                               key = medoc + data_frame.loc[{medoc}, 'Condition'][i])
-                                               if txt :                
-                                                    st.text_area("À adapter selon le contexte", 
+                                            if txt :
+                                                st.text_area("À adapter selon le contexte", 
                                                               f"{data_frame.loc[{medoc}, 'Paragraphe'][i]}",
                                                               key = int(np.random.randint(0, 100000, size=(1, 1))), max_chars=500, help="Source : À complèter")
-                                                    text_to_be_copied = data_frame.loc[{medoc}, 'Paragraphe'][i]
-                                                    copy_dict = {"content": text_to_be_copied}
+                                                text_to_be_copied = data_frame.loc[{medoc}, 'Paragraphe'][i]
+                                                copy_dict = {"content": text_to_be_copied}
 
-                                                    copy_button = Button(label="Copier le texte")
-                                                    copy_button.js_on_event("button_click", CustomJS(args=copy_dict, code="""
-                                                        navigator.clipboard.writeText(content);
-                                                        """))
+                                                copy_button = Button(label="Copier le texte")
+                                                copy_button.js_on_event("button_click", CustomJS(args=copy_dict, code="""
+                                                    navigator.clipboard.writeText(content);
+                                                    """))
 
-                                                    no_event = streamlit_bokeh_events(
-                                                        copy_button,
-                                                        events="GET_TEXT",
-                                                        key=int(np.random.randint(0, 100000, size=(1, 1))),
-                                                        refresh_on_update=True,
-                                                        override_height=40,
-                                                        debounce_time=0)
+                                                no_event = streamlit_bokeh_events(
+                                                    copy_button,
+                                                    events="GET_TEXT",
+                                                    key=int(np.random.randint(0, 100000, size=(1, 1))),
+                                                    refresh_on_update=True,
+                                                    override_height=40,
+                                                    debounce_time=0)
                                      else :
                                         #try :
                                         if data_frame.loc[{medoc}, 'Category'][i] != data_frame.loc[{medoc}, 'Category'][i-1] :
