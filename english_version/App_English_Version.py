@@ -363,7 +363,3 @@ def about():
     st.sidebar.write("Made by [Arthur Carré](mailto:arthur.carre@icloud.com) with **_Streamlit_**") 
 
 # -----------------------------------------------------------------------------
-     
-if __name__ == "__main__":
-    main()
-    about()
