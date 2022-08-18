@@ -91,7 +91,7 @@ def main():
 
                                 compteur2 = 0
                                 for i in range(compteur):
-                                     if data_frame.loc[{medoc}, 'Category'][i] == 'Contrôle des indications :' :
+                                     if data_frame.loc[{medoc}, 'Category'][i] == 'Contrôle des indications et stratégie thérapeutique :' :
                                           compteur2 += 1
                                 for i in range(compteur):
                                      if i == 0 :
