@@ -35,7 +35,7 @@ def main():
         App_English_Version.run()
     else :
         def run():
-            data_frame = pd.read_csv('Analyse Pharmacotherapeutique File.csv')
+            data_frame = pd.read_csv('Drugs_Database_Pharmacotherapeutic_analysis_MUPA.csv')
             data_frame.set_index('Index', inplace=True)
 
             liste_medoc = [str(medoc) for medoc in set(data_frame.index)]
