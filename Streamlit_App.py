@@ -42,7 +42,7 @@ def main():
 
             option = st.sidebar.selectbox(
                   "Choisis un médicament. Petite astuce : Il suffit de cliquer sur la barre de recherche (pas besoin d'effacer) et de taper les première lettres du"
-                  " médicament (DCI ou Princeps).",
+                  " médicament (DCI ou Princeps). Attention, les informations dans cette application sont à utiliser avec une validation pharmaceutique ou une validation médicale.",
                   liste_medoc)
 
             if "liste_presc" in st.session_state:
